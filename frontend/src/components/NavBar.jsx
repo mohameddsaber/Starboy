@@ -29,7 +29,7 @@ function NavBar() {
 
       {/* Sidebar menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-[250px] bg-white shadow-md transform transition-transform duration-500 ease-in-out ${
+        className={`fixed top-0 left-0 h-full w-[300px] bg-white shadow-md transform transition-transform duration-500 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -42,13 +42,16 @@ function NavBar() {
         </div>
 
         {/* Menu links */}
-        <div className="flex flex-col justify-start items-start font-[Karla] tracking-[2px] uppercase pl-5 pr-5">
-            <MenuItem title="Style" links={["Winter", "Summer"]} />
-            <MenuItem title="Fitness" links={["Gym", "Yoga"]} />
-            <MenuItem title="Travel" links={["Europe", "Asia"]} />
-            <p className="pt-3.5 pb-3.5 cursor-pointer">Lifestyle</p>
-            <p className="pt-3.5 pb-3.5 cursor-pointer">About</p>
-            <p className="font-[600] pt-3.5 pb-3.5 cursor-pointer">Shop My Outfits</p>
+        <div className="flex flex-col justify-start items-start font-[Karla] tracking-[2px] uppercase pl-5 pr-5 text-[#313131] text-[13px]">
+            <a href="/" className="pt-3.5 pb-3.5 cursor-pointer">Home</a>
+            <MenuItem 
+              title="Lifestyle"
+              link={{ path: "/books", label: "Books" }}
+            />
+            <a href="/fitness" className="pt-3.5 pb-3.5 cursor-pointer">Fitness</a>
+            <a href="/outfits" className="pt-3.5 pb-3.5 cursor-pointer">Outfits</a>
+            <a href ="/about" className="pt-3.5 pb-3.5 cursor-pointer">About</a>
+            <a href="/shop" className="font-[600] pt-3.5 pb-3.5 cursor-pointer">Shop My Outfits</a>
         </div>
 
         {/* Social + Search */}
