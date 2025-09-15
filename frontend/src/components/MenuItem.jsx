@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa";
 
-function MenuItem({ title, link }) {
+function MenuItem({ title, links = [] }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -23,15 +23,17 @@ function MenuItem({ title, link }) {
       {/* Animated Submenu */}
       <div
         className={`overflow-hidden transition-all ease-in duration-350 ${
-          isOpen ? "max-h-20 opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <ul className="pl-5">
-          <li className="py-1 cursor-pointer">
-            <Link to={link.path} className="hover:text-blue-500">
-              {link.label}
-            </Link>
-          </li>
+          {links.map((link, idx) => (
+            <li key={idx} className="py-1 cursor-pointer">
+              <Link to={link.path} className="hover:text-blue-500">
+                {link.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

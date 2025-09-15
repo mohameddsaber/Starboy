@@ -46,11 +46,20 @@ function NavBar() {
             <a href="/" className="pt-3.5 pb-3.5 cursor-pointer">Home</a>
             <MenuItem 
               title="Lifestyle"
-              link={{ path: "/books", label: "Books" }}
+              links={[{ path: "/books", label: "Books" }]}
             />
             <a href="/fitness" className="pt-3.5 pb-3.5 cursor-pointer">Fitness</a>
-            <a href="/outfits" className="pt-3.5 pb-3.5 cursor-pointer">Outfits</a>
-            <a href ="/about" className="pt-3.5 pb-3.5 cursor-pointer">About</a>
+            <MenuItem 
+              title="Outfits"
+              links={[
+                  { path: "/outfits/summer", label: "Summer Outfits" },
+                  { path: "/outfits/winter", label: "Winter Outfits" },
+                  { path: "/outfits/fall", label: "Fall Outfits" },
+                  { path: "/outfits/spring", label: "Spring Outfits" }
+                ]}
+
+            />
+            <a href="/about" className="pt-3.5 pb-3.5 cursor-pointer">About</a>
             <a href="/shop" className="font-[600] pt-3.5 pb-3.5 cursor-pointer">Shop My Outfits</a>
         </div>
 

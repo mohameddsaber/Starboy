@@ -1,13 +1,13 @@
 
-import OutfitCard from "../components/OutfitCard";
+import OutfitCard from "../../components/OutfitCard.jsx";
 
-function OutfitsPage() {
+function SummerOutfits() {
   const outfits = [
     {
       name: "Minimalist Chic",
       occasion: "Work Meeting",
       season: "Fall",
-      image: "./1.jpeg",
+      image: "../public/1.jpeg",
       description:
         "A clean, professional look perfect for important meetings and presentations.",
       items: [
@@ -72,4 +72,4 @@ function OutfitsPage() {
   );
 }
 
-export default OutfitsPage;
+export default SummerOutfits;
