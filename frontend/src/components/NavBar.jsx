@@ -60,7 +60,7 @@ function NavBar() {
 
             />
             <a href="/about" className="pt-3.5 pb-3.5 cursor-pointer">About</a>
-            <a href="/shop" className="font-[600] pt-3.5 pb-3.5 cursor-pointer">Shop My Outfits</a>
+            <a href="/Wardrobe" className="font-[600] pt-3.5 pb-3.5 cursor-pointer">Starboy Wardrobe</a>
         </div>
 
         {/* Social + Search */}

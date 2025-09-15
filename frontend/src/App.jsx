@@ -6,7 +6,7 @@ import FitnessPage from "./pages/FitnessPage"
 import AboutPage from "./pages/AboutPage"
 import HomePage from "./pages/HomePage"
 import OutfitsPage from "./pages/OutfitsPage"
-import ShopPage from "./pages/ShopPage"
+import WardrobeItemsPage from "./pages/WardrobeItemsPage"
 import SummerOutfits from "./pages/outfits/SummerOutfits"
 import WinterOutfits from "./pages/outfits/WinterOutfits"
 import SpringOutfits from "./pages/outfits/SpringOutfits"
@@ -30,7 +30,7 @@ function App() {
         <Route path="/outfits/winter" element={<WinterOutfits />} />
         <Route path="/outfits/spring" element={<SpringOutfits />} />
         <Route path="/outfits/fall" element={<FallOutfits />} />
-        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/wardrobe" element={<WardrobeItemsPage />} />
       </Routes>
 
     </div>
