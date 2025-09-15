@@ -74,9 +74,9 @@ function OutfitCard({ outfit }) {
               {outfit.items.map((item, idx) => (
                 <div key={idx} className="flex justify-between text-xs">
                   <span className="text-gray-700">{item.type}</span>
-                  <span className="text-gray-500">
+                  <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-gray-500">
                     {item.brand || item.description}
-                  </span>
+                  </a>
                 </div>
               ))}
             </div>

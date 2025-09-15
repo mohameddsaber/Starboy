@@ -4,9 +4,9 @@ import OutfitCard from "../../components/OutfitCard.jsx";
 function SummerOutfits() {
   const outfits = [
     {
-      name: "Minimalist Chic",
-      occasion: "Work Meeting",
-      season: "Fall",
+      name: "",
+      occasion: "",
+      season: "Summer",
       image: "../public/1.jpeg",
       description:
         "A clean, professional look perfect for important meetings and presentations.",
