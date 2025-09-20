@@ -62,6 +62,7 @@ function OutfitsPage() {
       </div>
 
       {/* Scattered Polaroid Grid */}
+      
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center items-start gap-8">
         {outfits.map((outfit, index) => (
             <OutfitCard key={index} outfit={outfit} index={index} />

@@ -6,20 +6,123 @@ function AboutPage() {
     {
       name: "",
       occasion: "",
-      season: "Summer",
-      image: "../public/outfits/1.jpeg",
+      season: "",
+      image: "../public/gallary/myGallery1.jpg",
       description:
         "A clean, professional look perfect for important meetings and presentations.",
       items: [
-        { type: "T Shirt", brand: "Everlane" ,link:"https://www.everlane.com/products"},
-        { type: "Trousers", brand: "COS" },
-        { type: "Jacket", brand: "Uniqlo" },
-        { type: "Shoes", description: "Black leather loafers" },
+        { type: "Shirt", brand: "H&M" ,link:""},
+        { type: "Jeans", brand: "H&M" },
+        { type: "Belt", brand: "Defacto" },
+        { type: "Shoes", description: "Nike Air Jordan 1 retro" },
         { type: "Watch", brand: "Casio" },
       ],
       tags: ["Professional", "Neutral", "Classic"],
       
     },
+    {
+      name: "",
+      occasion: "",
+      season: "",
+      image: "../public/gallary/myGallery2.jpeg",
+      description:
+        "A casual look perfect for weekend adventures and casual outings.",
+      items: [
+        { type: "Shirt", brand: "American Eagle" ,link:""},
+        { type: "Tanktop", brand: "H&M" },
+        { type: "Jeans", brand: "H&M" },
+        { type: "Belt", brand: "Defacto" },
+        { type: "Shoes", description: "Nike Air Jordan 1 retro" },
+        { type: "Watch", brand: "Casio" },
+      ],
+      tags: ["Casual", "Neutral", "Classic"],
+  
+},
+    {
+      name: "",
+      occasion: "",
+      season: "",
+      image: "../public/gallary/myGallery3.jpeg",
+      description:
+        "A casual look perfect for weekend adventures and casual outings.",
+      items: [
+        { type: "Shirt", brand: "American Eagle" ,link:""},
+        { type: "Tanktop", brand: "H&M" },
+        { type: "Jeans", brand: "H&M" },
+        { type: "Belt", brand: "Defacto" },
+        { type: "Shoes", description: "Nike Air Jordan 1 retro" },
+        { type: "Watch", brand: "Casio" },
+      ],
+      tags: ["Casual", "Neutral", "Classic"],
+  
+    },
+    {
+      name: "",
+      occasion: "",
+      season: "",
+      image: "../public/gallary/myGallery4.jpeg",
+      description:
+        "A casual look perfect for weekend adventures and casual outings.",
+      items: [
+        { type: "Shirt", brand: "American Eagle" ,link:""},
+        { type: "Tanktop", brand: "H&M" },
+        { type: "Jeans", brand: "H&M" },
+        { type: "Belt", brand: "Defacto" },
+        { type: "Shoes", description: "Nike Air Jordan 1 retro" },
+        { type: "Watch", brand: "Casio" },
+      ],
+      tags: ["Casual", "Neutral", "Classic"],
+  
+    },
+    {
+      name: "",
+      occasion: "",
+      season: "",
+      image: "../public/gallary/myGallery5.jpeg",
+      description:
+        "A clean, professional look perfect for important meetings and presentations.",
+      items: [
+        { type: "Shirt", brand: "H&M" ,link:""},
+        { type: "Trousers", brand: "H&M" },
+        { type: "Shoes", description: "Nike Air Jordan 1 retro" },
+        { type: "Watch", brand: "Casio" },
+      ],
+      tags: ["Professional", "Neutral", "Classic"],
+  
+    },
+    {
+      name: "",
+      occasion: "",
+      season: "",
+      image: "../public/gallary/myGallery6.jpg",
+      description:
+        "A rugged, outdoor-inspired look perfect for hiking and adventurous activities.",
+      items: [
+        { type: "Shirt", brand: "H&M" ,},
+        { type: "Shorts", brand: "Lc Waikiki" },
+        { type: "Shoes", description: "Sandals" },
+        { type: "Watch", brand: "Casio" },
+      ],
+      tags: ["Beachwear", "Comfortable", "Relaxed"],
+  
+    },
+    {
+      name: "",
+      occasion: "",
+      season: "",
+      image: "../public/gallary/myGallery7.jpg",
+      description:
+        "A sleek, modern look perfect for nightlife and evening events.",
+      items: [
+        { type: "Tanktop", brand: "H&M" ,link:""},
+        { type: "SweatPants", brand: "Lc Waikiki" },
+        { type: "Shoes", description: "Nike Air Jordan 1 retro" },
+        { type: "Watch", brand: "Casio" },
+      ],
+      tags: ["Gymwear", "Workout", "Athletic"],
+  
+    },
+
   ];
   
     return (
@@ -34,9 +137,9 @@ function AboutPage() {
         {/* Profile Pic */}
 <div className="w-80 aspect-square rounded-full overflow-hidden shadow-lg">
   <img
-    src="../outfits/1.jpeg"
+    src="../public/gallary/myGallery1.jpg"
     alt="Mohamed Saber"
-    className="w-full h-full object-cover object-top"
+    className="w-full h-full object-cover object-center"
   />
 </div>
 
@@ -72,7 +175,7 @@ function AboutPage() {
 
       {/* Gallery Section */}
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-start"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.4 }}
@@ -113,9 +216,9 @@ function AboutPage() {
         <h2 className="text-2xl font-bold text-gray-800">Let’s Connect</h2>
         <p className="text-gray-600 mt-2">Find me on social media or check out my work.</p>
         <div className="flex justify-center gap-4 mt-4">
-          <a href="https://instagram.com/yourusername" className="text-blue-500 hover:underline">Instagram</a>
-          <a href="https://github.com/yourusername" className="text-blue-500 hover:underline">GitHub</a>
-          <a href="https://linkedin.com/in/yourusername" className="text-blue-500 hover:underline">LinkedIn</a>
+          <a href="https://instagram.com/xmohamedsaber" className="text-blue-500 hover:underline" target="_blank">Instagram</a>
+          <a href="https://github.com/mohameddsaber" className="text-blue-500 hover:underline" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/mohamedsaberr" className="text-blue-500 hover:underline" target="_blank">LinkedIn</a>
         </div>
       </motion.div>
     </div>
