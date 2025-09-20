@@ -17,8 +17,20 @@ function App() {
 
 
   return (
-    <div className="bg-[#f4f2ef] ">
-      <NavBar/>
+    <>
+   
+      <div className="hidden md:block fixed top-0 left-0 right-0 z-50">
+        <Header />
+      </div>
+
+      {/* NavBar for small screens (hidden on desktop) */}
+      <div className="md:hidden fixed top-0 left-0 right-0 z-50">
+        <NavBar />
+      </div>
+
+      <div className="bg-[#f4f2ef] pt-[40px] min-h-screen">
+      
+
 
       <Routes>
         <Route path="/books" element={<BooksPage />} />
@@ -34,6 +46,7 @@ function App() {
       </Routes>
 
     </div>
+    </>
   )
 }
 

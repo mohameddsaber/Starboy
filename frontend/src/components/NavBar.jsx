@@ -49,16 +49,9 @@ function NavBar() {
               links={[{ path: "/books", label: "Books" }]}
             />
             <a href="/fitness" className="pt-3.5 pb-3.5 cursor-pointer">Fitness</a>
-            <MenuItem 
-              title="Outfits"
-              links={[
-                  { path: "/outfits/summer", label: "Summer Outfits" },
-                  { path: "/outfits/winter", label: "Winter Outfits" },
-                  { path: "/outfits/fall", label: "Fall Outfits" },
-                  { path: "/outfits/spring", label: "Spring Outfits" }
-                ]}
+            <a href="/outfits" className="pt-3.5 pb-3.5 cursor-pointer">Outfits</a>
 
-            />
+            
             <a href="/about" className="pt-3.5 pb-3.5 cursor-pointer">About</a>
             <a href="/Wardrobe" className="font-[600] pt-3.5 pb-3.5 cursor-pointer">Starboy Wardrobe</a>
         </div>

@@ -1,5 +1,6 @@
 import { FaSearch, FaSoundcloud, FaPinterest } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
+import MenuItem from "./MenuItem";
 
 
 function Header() {
@@ -8,13 +9,24 @@ function Header() {
     <div className="flex flex-direction-row justify-between  bg-white text-[#313131] text-[13px] ">
          
         <div className="flex justify-start items-center h-[75px] gap-10 p-5 font-[Karla] tracking-[2px] uppercase pl-12 ">
-            <p>Style</p>
-            <p>Fitness</p>
-            <p>Travel</p>
-            <p>Lifestyle</p>
-            <p>About</p>
-            <p className="font-[600]">Shop My Outfits</p>
+            <a href="/" className="pt-3.5 pb-3.5 cursor-pointer">Home</a>
+        <div className="relative group pt-3.5 pb-3.5 cursor-pointer">
+          <p>Lifestyle</p>
+            <div className="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300">
+            <a
+                href="/books"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            >
+                Book
+            </a>
+ 
+            </div>
         </div>
+        <a href="/fitness" className="pt-3.5 pb-3.5 cursor-pointer">Fitness</a>
+        <a href="/outfits" className="pt-3.5 pb-3.5 cursor-pointer">Outfits</a>
+        <a href="/about" className="pt-3.5 pb-3.5 cursor-pointer">About</a>
+        <a href="/Wardrobe" className="font-[600] pt-3.5 pb-3.5 cursor-pointer">Starboy Wardrobe</a>
+      </div>
 
         <div className="flex gap-6 text-[#2a3a51] text-md justify-center items-center pr-12 ">
             <FaSoundcloud className="cursor-pointer" />
