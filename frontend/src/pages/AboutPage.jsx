@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import OutfitCard from "../components/OutfitCard.jsx";
+import OutfitCard from "../components/AboutCard";
 
 function AboutPage() {
   const gallery = [

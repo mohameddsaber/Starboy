@@ -1,5 +1,5 @@
 import Book from "../components/Book";
-import books from "../utils/books";
+import books from "../data/books";
 
 function BooksPage() {
   return (

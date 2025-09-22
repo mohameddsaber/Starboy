@@ -1,27 +1,13 @@
 import { useState } from "react";
 import ItemCard from "../components/ItemCard";
+import {items} from "../data/wardrobeItems";
 
 function WardrobeItemsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const items = [
-    {
-      type: "T-Shirt",
-      brand: "Zara",
-      category: "Tops",
-      image: "/images/tshirt.jpg",
-      link: "https://zara.com/some-item",
-    },
-    {
-      type: "Sneakers",
-      brand: "Nike",
-      category: "Shoes",
-      image: "/../outfits/1.jpeg",
-      link: "https://nike.com/some-shoe",
-    },
-  ];
 
-  const categories = ["All", "Tops", "Bottoms", "Outerwear", "Shoes", "Accessories"];
+
+  const categories = ["All", "Tops", "Bottoms", "Outerwear", "Shoes", "Sportswear", "Accessories"];
 
   // Filtering logic
   const filteredItems =
