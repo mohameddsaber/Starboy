@@ -29,9 +29,29 @@ function Header() {
       </div>
 
         <div className="flex gap-6 text-[#2a3a51] text-md justify-center items-center pr-12 ">
-            <FaSoundcloud className="cursor-pointer" />
-            <FaPinterest className="cursor-pointer" />
-            <BsInstagram className="cursor-pointer" />
+            <a
+              href="https://soundcloud.com/mohamed-saber-705705117/sets"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaSoundcloud className="cursor-pointer" />
+            </a>
+
+            <a
+              href="https://www.pinterest.com/mohamedsaber1107/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaPinterest className="cursor-pointer" />
+            </a>
+
+            <a
+              href="https://www.instagram.com/xmohamedsaber"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BsInstagram className="cursor-pointer" />
+            </a>
             <div className="group flex items-center">
 
                 {/* wrapper that animates width; input inside is full-width */}
