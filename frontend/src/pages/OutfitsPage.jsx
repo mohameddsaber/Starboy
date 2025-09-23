@@ -202,19 +202,19 @@ export default function OutfitsPage() {
       <div className="flex flex-wrap justify-center gap-4">
         <button
           onClick={resetToCurated}
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium cursor-pointer"
+          className="px-6 py-3 bg-black hover:bg-gray-600 text-white rounded-lg  transition-colors font-medium cursor-pointer"
         >
           Show Curated Outfits
         </button>
         <button
           onClick={showOnlyGenerated}
-          className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium cursor-pointer"
+          className="px-6 py-3 bg-gray-600 hover:bg-gray-400 text-white rounded-lg  transition-colors font-medium cursor-pointer"
         >
           Generate New Outfits
         </button>
         <button
           onClick={() => generateNewOutfits(4)}
-          className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium cursor-pointer"
+          className="px-6 py-3 bg-gray-400 hover:bg-gray-200 text-gray-800 border border-gray-300 rounded-lg  transition-colors font-medium cursor-pointer"
         >
           Add More Random Outfits
         </button>

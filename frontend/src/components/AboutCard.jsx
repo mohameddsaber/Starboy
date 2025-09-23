@@ -78,10 +78,9 @@ function AboutCard({ outfit }) {
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-blue-500 hover:underline"
+                    className="flex items-center gap-1 text-gray-700 hover:underline"
                   >
                     {item.brand || item.description}
-                    <FaExternalLinkAlt size={10} className="text-gray-400" />
                   </a>
                 </div>
               ))}
