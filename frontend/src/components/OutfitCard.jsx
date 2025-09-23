@@ -25,6 +25,7 @@ export default function OutfitCard({ outfit }) {
               <img
                 src={item.image}
                 alt={item.type}
+                loading="lazy"
                 className="w-full h-40 object-cover rounded-xl border group-hover:scale-105 transition-transform"
               />
               <p className="mt-1 text-xs text-center text-gray-600">{item.type}</p>

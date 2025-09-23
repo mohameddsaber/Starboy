@@ -35,6 +35,7 @@ function Book({ title, author, description, coverImage, date, index = 0 }) {
       {/* Book cover */}
       <motion.img
         src={`/book-covers/${coverImage}`}
+        loading="lazy"
         alt="book cover"
         className="w-150"
         variants={fadeUp}
