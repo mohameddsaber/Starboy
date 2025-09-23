@@ -1,4 +1,5 @@
 import WorkoutCard from "../components/WorkoutCard.jsx";
+import { motion } from "framer-motion";
 
 function FitnessPage() {
   const workouts = {
@@ -30,57 +31,107 @@ function FitnessPage() {
       { name: "Tricep Extension", info: "2 sets 5-12 reps" },
     ]
   };
-  
+
+  // General animation for fade + slide
+  const sectionAnim = {
+    hidden: { opacity: 0, y: 20 },
+    show: (i = 0) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.2, // stagger delay between sections
+        duration: 0.5,
+      },
+    }),
+  };
 
   return (
-    
-    <div className="p-6 flex justify-center gap-6 flex-col items-center ">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-[Karla] text-gray-700 mb-6">
+    <div className="p-6 flex justify-center gap-6 flex-col items-center">
+      <motion.h1
+        className="text-2xl sm:text-3xl md:text-4xl font-[Karla] text-gray-700 mb-6"
+        variants={sectionAnim}
+        initial="hidden"
+        animate="show"
+      >
         Workout Routine
-      </h1>
-      {Object.entries(workouts).map(([section, exercises]) => (
-        <WorkoutCard 
+      </motion.h1>
+
+      {Object.entries(workouts).map(([section, exercises], i) => (
+        <motion.div
           key={section}
-          section={section}
-          exercises={exercises}
-        />
+          variants={sectionAnim}
+          initial="hidden"
+          animate="show"
+          custom={i + 1}
+          className="w-full"
+        >
+          <WorkoutCard section={section} exercises={exercises} />
+        </motion.div>
       ))}
-      <h2 className="text-sm sm:text-md md:text-lg font-[Karla] leading-[2.5] tracking-[1px] text-gray-600 mt-6 w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl text-center bg-white shadow-md overflow-hidden py-4 px-6 rounded mx-auto">
-        *Remember to progressively overload your muscles by increasing weights or reps over time.
-         Consistency and proper nutrition and sleep
-         are key to seeing results. Always prioritize form to prevent injuries.
-      </h2>
-      <h2 className="text-sm sm:text-md md:text-lg font-[Karla] leading-[2.5] tracking-[1px] text-gray-600 mt-6 w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl text-center bg-white shadow-md overflow-hidden py-4 px-6 rounded mx-auto">
-        *If you're new to fitness, start with light weights.
-          Focus on mastering the exercises with proper form.
-         Gradually increase the weight and reps as you progress.
-      </h2>
 
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-[Karla] leading-[2.5] tracking-[1px] text-gray-600 mb-6 mt-12">
+      <motion.h2
+        className="text-sm sm:text-md md:text-lg font-[Karla] leading-[2.5] tracking-[1px] text-gray-600 mt-6 w-full max-w-2xl text-center bg-white shadow-md overflow-hidden py-4 px-6 rounded mx-auto"
+        variants={sectionAnim}
+        initial="hidden"
+        animate="show"
+        custom={4}
+      >
+        *Remember to progressively overload your muscles by increasing weights or reps over time...
+      </motion.h2>
+
+      <motion.h2
+        className="text-sm sm:text-md md:text-lg font-[Karla] leading-[2.5] tracking-[1px] text-gray-600 mt-6 w-full max-w-2xl text-center bg-white shadow-md overflow-hidden py-4 px-6 rounded mx-auto"
+        variants={sectionAnim}
+        initial="hidden"
+        animate="show"
+        custom={5}
+      >
+        *If you're new to fitness, start with light weights. Focus on mastering the exercises...
+      </motion.h2>
+
+      <motion.h1
+        className="text-2xl sm:text-3xl md:text-4xl font-[Karla] leading-[2.5] tracking-[1px] text-gray-600 mb-6 mt-12"
+        variants={sectionAnim}
+        initial="hidden"
+        animate="show"
+        custom={6}
+      >
         Nutrition
-      </h1>
-      <h2 className="text-sm sm:text-md md:text-lg font-[Karla] leading-[2.5] tracking-[1px] text-gray-600 mt-6 w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl text-center bg-white shadow-md overflow-hidden py-4 px-6 rounded mx-auto">
-        Aim for a 1.4-1.8g of protein per kg of body weight daily to support muscle growth and repair.
-          <br></br>Aim for a min 0.6-1.0g of healthy fats per kg of body weight for energy and overall health.<br></br>
-          <br></br>Incorporate carbohydrates based on your fitness goals (cutting, bulking, etc.).
-      </h2>
-      <h2 className="text-sm sm:text-md md:text-lg font-[Karla] leading-[2.5] tracking-[1px] text-gray-600 mt-6 w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl text-center bg-white shadow-md overflow-hidden py-4 px-6 rounded mx-auto">
-        Stay hydrated by drinking a min of 2-3 liters of water throughout the day.
-         Limit processed foods and sugary drinks.
-      </h2>
-      <h2 className="text-sm sm:text-md md:text-lg font-[Karla] leading-[2.5] tracking-[1px] font-bold text-gray-600 mt-6 w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl text-center bg-white shadow-md overflow-hidden py-4 px-6 rounded mx-auto">
-        Sample Meal Plan:<br></br>
-        Breakfast: omelette with spinach,cottage cheese and bread if you like.<br></br>
-        Pre-Workout: Sweet potato and plenty of fruits for the pump.<br></br>
-        Lunch: Grilled chicken breast, steamed vegetables, your favorite carb.<br></br>
-        Dinner: Cottage cheese salad.<br></br>
-        *Adjust portion sizes based on your caloric needs and goals.<br></br>
-        *you can eat more meals if you want to gain weight.<br></br>
-        *Feel free to swap out protein sources (e.g., fish, tofu) and vegetables based on your preferences.
+      </motion.h1>
 
-      </h2>
-   
+      <motion.h2
+        className="text-sm sm:text-md md:text-lg font-[Karla] leading-[2.5] tracking-[1px] text-gray-600 mt-6 w-full max-w-2xl text-center bg-white shadow-md overflow-hidden py-4 px-6 rounded mx-auto"
+        variants={sectionAnim}
+        initial="hidden"
+        animate="show"
+        custom={7}
+      >
+        Aim for 1.4–1.8g of protein per kg of body weight daily...
+      </motion.h2>
 
+      <motion.h2
+        className="text-sm sm:text-md md:text-lg font-[Karla] leading-[2.5] tracking-[1px] text-gray-600 mt-6 w-full max-w-2xl text-center bg-white shadow-md overflow-hidden py-4 px-6 rounded mx-auto"
+        variants={sectionAnim}
+        initial="hidden"
+        animate="show"
+        custom={8}
+      >
+        Stay hydrated by drinking a minimum of 2-3 liters of water throughout the day...
+      </motion.h2>
+
+      <motion.h2
+        className="text-sm sm:text-md md:text-lg font-[Karla] leading-[2.5] tracking-[1px] font-bold text-gray-600 mt-6 w-full max-w-2xl text-center bg-white shadow-md overflow-hidden py-4 px-6 rounded mx-auto"
+        variants={sectionAnim}
+        initial="hidden"
+        animate="show"
+        custom={9}
+      >
+        Sample Meal Plan: <br />
+        Breakfast: Omelette with spinach, cottage cheese and bread... <br />
+        Pre-Workout: Sweet potato and fruits... <br />
+        Lunch: Grilled chicken breast, steamed vegetables... <br />
+        Dinner: Cottage cheese salad...
+      </motion.h2>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import books from "../data/books";
 
 function BooksPage() {
   return (
-    <div className="flex flex-col justify-center gap-8 p-8">
+    <div className="flex flex-col justify-center gap-8 p-8 mt-5">
       {Object.entries(books).map(([title, bookData]) => (
         <Book
           key={title}
