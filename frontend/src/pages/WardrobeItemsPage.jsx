@@ -1,19 +1,34 @@
 import { useState } from "react";
 import ItemCard from "../components/ItemCard";
-import {items} from "../data/wardrobeItems";
+import { items } from "../data/wardrobeItems";
+import { motion } from "framer-motion";
 
 function WardrobeItemsPage() {
   const [activeCategory, setActiveCategory] = useState("All");
 
-
-
   const categories = ["All", "Tops", "Bottoms", "Outerwear", "Shoes", "Sportswear", "Accessories"];
 
-  // Filtering logic
   const filteredItems =
     activeCategory === "All"
       ? items
       : items.filter((item) => item.category === activeCategory);
+
+  // Parent animation (controls staggering)
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15, // delay between each card
+      },
+    },
+  };
+
+  // Child animation (each card)
+  const itemAnim = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-12 space-y-12">
@@ -38,12 +53,19 @@ function WardrobeItemsPage() {
         ))}
       </div>
 
-      {/* Items Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-start">
+      {/* Items Grid with staggered animation */}
+      <motion.div
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-start"
+        variants={container}
+        initial="hidden"
+        animate="show"
+      >
         {filteredItems.map((item, idx) => (
-          <ItemCard key={idx} item={item} />
+          <motion.div key={idx} variants={itemAnim}>
+            <ItemCard item={item} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
