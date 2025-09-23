@@ -29,13 +29,13 @@
     },
     {
       type: "Light Gray Straight Loose Low Jeans",
-      brand: "Zara",
+      brand: "H&M",
       category: "Bottoms",
       image: "https://media.alshaya.com/adobe/assets/urn:aaid:aem:6d2e9bc4-edba-4f5d-8a72-1cfa7348ab09/as/EID-783b3f776212d9c7719153655ba21bb8491bfecb.jpg?preferwebp=true&width=1920&auto=webp",
       link: "https://eg.hm.com/en/buy-straight-loose-low-jeans-grey",
     },
     {
-      type: " Blue Straight Loose Low Jeans",
+      type: "Blue Straight Loose Low Jeans",
       brand: "H&M",
       category: "Bottoms",
       image: "https://media.alshaya.com/adobe/assets/urn:aaid:aem:840ef9a3-ce0c-4ccf-b9e3-37b8ab04b848/as/EID-a20eb06ef70c5861a9c9904721f8da67755e78f2.jpg?preferwebp=true&width=1920&auto=webp",
@@ -193,6 +193,14 @@
       image: "https://eg.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/46/50362/1.jpg?7113",
       link: "https://mowatches1.com/products/ibso-tank-leather?variant=50233086804251",
       },
+      {
+      type: "Xiaomi Smart Band 8",
+      brand: "Xiaomi",
+      category: "Accessories",
+      image: "https://m.media-amazon.com/images/I/51RMCfxXbUL._AC_SL1000_.jpg",
+      link: "https://www.amazon.eg/-/en/Xiaomi-Smart-Band-manufacturer-warranty-White/dp/B0CD2MP728/ref=asc_df_B0CD2LRBKS?mcid=ee9dab0a299137cfaf10907a1fec09da&tag=egoshpadde-21&linkCode=df0&hvadid=725145996396&hvpos=&hvnetw=g&hvrand=4520632436172126197&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1005394&hvtargid=pla-2264743588957&language=en_AE&gad_source=1&th=1",
+      },
+
       {
       type: "Black Leather Belt",
       brand: "H&M",
