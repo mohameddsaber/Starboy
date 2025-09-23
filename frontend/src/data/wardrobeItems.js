@@ -148,7 +148,7 @@
       type: "Black Compression Shirt",
       brand: "Mavin",
       category: "Sportswear",
-      image: "https://www.mavin-wear.com/cdn/shop/files/43_fe5b6777-7d5d-41c3-91bd-f499a759bad6.jpg?v=1751450173&width=1800",
+      image: "black-compression.webp",
       link: "https://www.mavin-wear.com/products/essential-compression-t-shirt?variant=49868375294264",
     },
       {
@@ -169,7 +169,7 @@
       type: "Black 1.2 Compression Shirt",
       brand: "Mavin",
       category: "Sportswear",
-      image: "https://www.mavin-wear.com/cdn/shop/files/23_4225aab1-1e56-45c5-be31-47f3ce6a811e.jpg?v=1751450444&width=1800",
+      image: "1.2-black-compression.webp",
       link: "https://www.mavin-wear.com/products/compression-1-2-t-shirt-1?variant=49868483526968",
     },
       {
