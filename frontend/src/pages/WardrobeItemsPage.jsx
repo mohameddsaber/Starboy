@@ -54,18 +54,20 @@ function WardrobeItemsPage() {
       </div>
 
       {/* Items Grid with staggered animation */}
-      <motion.div
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-start"
-        variants={container}
-        initial="hidden"
-        animate="show"
-      >
-        {filteredItems.map((item, idx) => (
-          <motion.div key={idx} variants={itemAnim}>
-            <ItemCard item={item} />
-          </motion.div>
-        ))}
-      </motion.div>
+<motion.div
+  className={`gap-6 items-start justify-center flex flex-wrap`}
+  variants={container}
+  initial="hidden"
+  animate="show"
+>
+  {filteredItems.map((item, idx) => (
+    <motion.div key={idx} variants={itemAnim} className="w-full max-w-sm">
+      <ItemCard item={item} />
+    </motion.div>
+  ))}
+</motion.div>
+
+
     </div>
   );
 }
