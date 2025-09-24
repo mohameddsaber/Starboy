@@ -15,19 +15,19 @@ function Book({ title, author, description, coverImage, date, index = 0 }) {
   };
 
   return (
-    <div className="flex items-center justify-center flex-col">
+    <div className="flex items-center justify-center flex-col max-w-full px-4">
       {/* Title + author + date */}
       <motion.div
-        className="bg-white shadow-md p-6 w-150 flex justify-center items-center flex-col py-9"
+        className="bg-white shadow-md p-6 w-full max-w-[600px] sm:max-w-[500px] md:max-w-[600px] flex justify-center items-center flex-col py-9"
         variants={fadeUp}
         initial="hidden"
         animate="show"
         custom={0}
       >
-        <p className="mb-2 tracking-[2px] font-[Karla] text-xl font-light">
+        <p className="mb-2 tracking-[2px] font-[Karla] text-lg sm:text-xl font-light text-center">
           {title}: <span>{author}</span>
         </p>
-        <p className="mb-2 tracking-[2px] font-[Karla] text-sm font-light">
+        <p className="mb-2 tracking-[2px] font-[Karla] text-xs sm:text-sm font-light">
           {date}
         </p>
       </motion.div>
@@ -37,7 +37,7 @@ function Book({ title, author, description, coverImage, date, index = 0 }) {
         src={`/book-covers/${coverImage}`}
         loading="lazy"
         alt="book cover"
-        className="w-150"
+        className="w-full max-w-[600px] sm:max-w-[500px] md:max-w-[600px] h-auto"
         variants={fadeUp}
         initial="hidden"
         animate="show"
@@ -50,8 +50,9 @@ function Book({ title, author, description, coverImage, date, index = 0 }) {
         initial="hidden"
         animate="show"
         custom={2}
+        className="w-full max-w-[600px] sm:max-w-[500px] md:max-w-[600px]"
       >
-        <p className="w-150 font-sans tracking-[1px] font-light leading-loose text-gray-700 text-[12px] bg-white shadow-md p-6">
+        <p className="font-sans tracking-[1px] font-light leading-loose text-gray-700 text-xs sm:text-sm bg-white shadow-md p-4 sm:p-6">
           {description}
         </p>
       </motion.div>
