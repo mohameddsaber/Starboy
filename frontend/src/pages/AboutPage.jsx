@@ -7,7 +7,7 @@ function AboutPage() {
       name: "",
       occasion: "",
       season: "",
-      image: "../public/gallary/myGallery1.webp",
+      image: "../gallary/myGallery1.webp",
       description:
         "A clean, professional look perfect for important meetings and presentations.",
       items: [
@@ -24,7 +24,7 @@ function AboutPage() {
       name: "",
       occasion: "",
       season: "",
-      image: "../public/gallary/myGallery2.webp",
+      image: "../gallary/myGallery2.webp",
       description:
         "A casual look perfect for weekend adventures and casual outings.",
       items: [
@@ -42,7 +42,7 @@ function AboutPage() {
       name: "",
       occasion: "",
       season: "",
-      image: "../public/gallary/myGallery3.webp",
+      image: "../gallary/myGallery3.webp",
       description:
         "A casual look perfect for weekend adventures and casual outings.",
       items: [
@@ -60,7 +60,7 @@ function AboutPage() {
       name: "",
       occasion: "",
       season: "",
-      image: "../public/gallary/myGallery4.webp",
+      image: "../gallary/myGallery4.webp",
       description:
         "A casual look perfect for weekend adventures and casual outings.",
       items: [
@@ -78,7 +78,7 @@ function AboutPage() {
       name: "",
       occasion: "",
       season: "",
-      image: "../public/gallary/myGallery5.webp",
+      image: "../gallary/myGallery5.webp",
       description:
         "A clean, professional look perfect for important meetings and presentations.",
       items: [
@@ -94,7 +94,7 @@ function AboutPage() {
       name: "",
       occasion: "",
       season: "",
-      image: "../public/gallary/myGallery6.webp",
+      image: "../gallary/myGallery6.webp",
       description:
         "A rugged, outdoor-inspired look perfect for hiking and adventurous activities.",
       items: [
@@ -110,7 +110,7 @@ function AboutPage() {
       name: "",
       occasion: "",
       season: "",
-      image: "../public/gallary/myGallery7.webp",
+      image: "../gallary/myGallery7.webp",
       description:
         "A sleek, modern look perfect for nightlife and evening events.",
       items: [
@@ -137,7 +137,7 @@ function AboutPage() {
         {/* Profile Pic */}
 <div className="w-80 aspect-square rounded-full overflow-hidden shadow-lg">
   <img
-    src="../public/gallary/myGallery1.webp"
+    src="../gallary/myGallery1.webp"
     alt="Mohamed Saber"
     className="w-full h-full object-cover object-center"
   />
