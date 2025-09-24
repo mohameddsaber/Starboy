@@ -18,7 +18,7 @@ function Book({ title, author, description, coverImage, date, index = 0 }) {
     <div className="flex items-center justify-center flex-col max-w-full px-4">
       {/* Title + author + date */}
       <motion.div
-        className="bg-white shadow-md p-6 w-full max-w-[600px] sm:max-w-[500px] md:max-w-[600px] flex justify-center items-center flex-col py-9"
+        className="bg-white shadow-md p-6 w-full max-w-[600px] flex justify-center items-center flex-col py-9"
         variants={fadeUp}
         initial="hidden"
         animate="show"
@@ -37,7 +37,7 @@ function Book({ title, author, description, coverImage, date, index = 0 }) {
         src={`/book-covers/${coverImage}`}
         loading="lazy"
         alt="book cover"
-        className="w-full max-w-[600px] sm:max-w-[500px] md:max-w-[600px] h-auto"
+        className="w-full max-w-[600px] h-auto"
         variants={fadeUp}
         initial="hidden"
         animate="show"
@@ -50,7 +50,7 @@ function Book({ title, author, description, coverImage, date, index = 0 }) {
         initial="hidden"
         animate="show"
         custom={2}
-        className="w-full max-w-[600px] sm:max-w-[500px] md:max-w-[600px]"
+        className="w-full max-w-[600px]"
       >
         <p className="font-sans tracking-[1px] font-light leading-loose text-gray-700 text-xs sm:text-sm bg-white shadow-md p-4 sm:p-6">
           {description}
