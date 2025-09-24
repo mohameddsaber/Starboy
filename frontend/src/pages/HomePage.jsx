@@ -145,7 +145,7 @@ function HomePage() {
               transition={{ duration: 0.6, delay: 1.3 }}
             >
               <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                📚
+                👕
               </div>
               <h3 className="font-[Karla] text-lg font-light tracking-[1px] text-gray-800 mb-2">
                 WARDROBE
