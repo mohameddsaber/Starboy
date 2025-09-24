@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-function MenuItem({ title, links = [] }) {
+function MenuItem({ title, links = [], onClick }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -29,7 +29,11 @@ function MenuItem({ title, links = [] }) {
         <ul className="pl-5">
           {links.map((link, idx) => (
             <li key={idx} className="py-1 cursor-pointer">
-              <Link to={link.path} className="hover:text-blue-500">
+              <Link
+                to={link.path}
+                className="hover:text-blue-500"
+                onClick={onClick} // close sidebar on click
+              >
                 {link.label}
               </Link>
             </li>
@@ -39,5 +43,4 @@ function MenuItem({ title, links = [] }) {
     </div>
   );
 }
-
 export default MenuItem;

@@ -2,8 +2,13 @@ import { FaBars, FaTimes, FaSoundcloud, FaPinterest, FaSearch } from "react-icon
 import { BsInstagram } from "react-icons/bs";
 import { useState } from "react";
 import MenuItem from "./MenuItem";
+import { Link } from "react-router-dom";
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const handleSearchClick = () => {
+    setIsSearchOpen(!isSearchOpen);
+  };
 
   return (
     <div className="relative">
@@ -20,11 +25,14 @@ function NavBar() {
             onClick={() => setIsOpen(true)}
           />
         )}
-        <img 
-        src="/starboyLogo.png" 
-        alt="Starboy Logo" 
-        className="h-30 ml-auto"
-        />        
+        
+        <Link to="/" className="ml-auto">
+          <img 
+          src="/starboyLogo.png" 
+          alt="Starboy Logo" 
+          className="h-30 "
+          /> 
+        </Link>       
       </div>
 
       {/* Sidebar menu */}
@@ -47,6 +55,7 @@ function NavBar() {
             <MenuItem 
               title="Lifestyle"
               links={[{ path: "/books", label: "Books" }]}
+              onClick={() => setIsOpen(false)}
             />
             <a href="/fitness" className="pt-3.5 pb-3.5 cursor-pointer">Fitness</a>
             <a href="/outfits" className="pt-3.5 pb-3.5 cursor-pointer">Outfits</a>
@@ -85,13 +94,20 @@ function NavBar() {
           </div>
 
 
-          <div className="group flex items-center ml-auto">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-0 opacity-0 group-hover:w-40 group-hover:opacity-100 transition-all duration-500 ease-in-out ml-2 border border-gray-300 rounded px-2 h-[30px] bg-gray-100"
+    <div className="flex items-center ml-auto">
+      <input
+        type="text"
+        placeholder="Search..."
+        className={`transition-all duration-500 ease-in-out border border-gray-300 rounded px-2 h-[30px] bg-gray-100 mr-2 ${
+          isSearchOpen 
+            ? "w-30 opacity-100" 
+            : "w-0 opacity-0"
+        }`}
             />
-            <FaSearch className="cursor-pointer" />
+            <FaSearch 
+              className="cursor-pointer" 
+              onClick={handleSearchClick}
+            />
           </div>
         </div>
       </div>
